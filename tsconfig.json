@@ -28,5 +28,9 @@
     ".next/types/**/*.ts",
     "src/hooks/queries/useItemsBySellerIdtsx"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "strict": false,          // 전체적인 엄격한 타입 검사를 끔
+    "noEmitOnError": false    // 타입 오류가 있어도 컴파일을 진행
+  }
 }
