@@ -43,13 +43,6 @@ export const getOrderedItemsById = async (id: number) => {
   return data;
 };
 
-//@param item 배열
-//@return 추가된 item 데이터 값
-export const addOrderedItems = async (items: ItemArray) => {
-  const { data, error, status } = await supabase.from('ordered_items').insert([items]).select();
-  return data;
-};
-
 //@param 배송상태 string enum 값
 //enum list : pending paid shipped delivered cancelled
 //@return 업데이트된 status 데이터 값
